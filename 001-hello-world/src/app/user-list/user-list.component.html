@@ -1,0 +1,6 @@
+<ul>
+  <li *ngFor="let name of names">
+    <!-- To pass values to a component we use the bracket [] syntax in our template -->
+    <app-user-item [name]="name"></app-user-item>
+  </li>
+</ul>
