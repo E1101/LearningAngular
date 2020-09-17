@@ -1,0 +1,7 @@
+<div class="inventory-app">
+  <!-- $event is a special variable here that represents the thing emitted on (i.e. sent to) the output. -->
+  <products-list
+    [productList]="products"
+    (onProductSelected)="productWasSelected($event)">
+  </products-list>
+</div>

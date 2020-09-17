@@ -1,0 +1,10 @@
+<div class="ui items">
+  <!-- [class.selected]="isSelected(myProduct)" This syntax says
+       “add the CSS class selected if isSelected(myProduct) returns true.” -->
+  <product-row
+    *ngFor="let myProduct of productList"
+    [product]="myProduct"
+    (click)='clicked(myProduct)'
+    [class.selected]="isSelected(myProduct)">
+  </product-row>
+</div>

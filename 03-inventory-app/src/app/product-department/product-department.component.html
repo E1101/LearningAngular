@@ -1,0 +1,7 @@
+<div class="product-department">
+  <!-- the second expression is how you get the iteration number out of ngFor. -->
+  <span *ngFor="let name of product.department; let i=index">
+    <a href="#">{{ name }}</a>
+    <span>{{i < (product.department.length-1) ? '>' : ''}}</span>
+  </span>
+</div>
