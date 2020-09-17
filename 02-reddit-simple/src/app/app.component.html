@@ -1,0 +1,27 @@
+<form class="ui large form segment">
+  <h3 class="ui header">Add a Link</h3>
+  <div class="field">
+    <label for="title">Title:</label>
+    <!--
+    The #newtitle syntax is called a resolve.
+    The effect is that this makes the variable newtitle available to the expressions within this view.
+
+    newtitle is now an object that represents this input DOM element.
+    -->
+    <input #newTitle name="title" id="title">
+  </div>
+  <div class="field">
+    <label for="link">Link:</label>
+    <!--
+    same as #newTitle
+    -->
+    <input #newLink name="link" id="link"></div>
+
+  <button (click)="addArticle(newTitle, newLink)" class="ui positive right floated button">
+    Submit link
+  </button>
+</form>
+
+<div class="ui grid posts">
+  <app-article *ngFor="let article of sortedArticles()" [article]="article"></app-article>
+</div>
