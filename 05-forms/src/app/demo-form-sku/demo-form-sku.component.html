@@ -1,0 +1,32 @@
+<div class="ui raised segment">
+  <h2 class="ui header">Demo Form: Sku</h2>
+  <!-- if you import FormsModule, NgForm will get automatically
+       attached to any <form> tags you have in your view. -->
+  <!-- Here we’re creating an alias to ngForm, for this view,
+       bound to the variable #f.
+       And what type of object is ngForm? It is a FormGroup. -->
+  <!-- (!) you could have a form that doesn’t get NgForm applied
+       by using the ngNoForm attribute. -->
+  <form #f="ngForm"
+        (ngSubmit)="onSubmit(f.value)"
+        class="ui form">
+
+    <div class="field">
+      <label for="skuInput">SKU</label>
+      <!-- When we use ngModel with no attribute value we are specifying:
+           1. a one-way data binding
+           2. we want to create a FormControl on this form with the name sku
+              (because of the name attribute on the input tag)
+
+           NgModel creates a new FormControl that is automatically added to the parent
+           FormGroup (in this case, on the form) and then binds a DOM element to that new FormControl.
+           -->
+      <input ngModel type="text"
+             id="skuInput"
+             placeholder="SKU"
+             name="sku">
+    </div>
+
+    <button type="submit" class="ui button">Submit</button>
+  </form>
+</div>

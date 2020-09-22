@@ -20,49 +20,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="1b4d22e2-7482-4f0a-9a09-582aed3e5440" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/../.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/.browserslistrc" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/.editorconfig" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/README.md" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/angular.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/e2e/protractor.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/e2e/src/app.e2e-spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/e2e/src/app.po.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/e2e/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/karma.conf.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/package-lock.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/package.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/app.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/app.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/app.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/app.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/app.module.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/hello-world/hello-world.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/hello-world/hello-world.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/hello-world/hello-world.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/hello-world/hello-world.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/user-item/user-item.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/user-item/user-item.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/user-item/user-item.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/user-item/user-item.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/user-list/user-list.component.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/user-list/user-list.component.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/user-list/user-list.component.spec.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/app/user-list/user-list.component.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/assets/.gitkeep" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/environments/environment.prod.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/environments/environment.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/favicon.ico" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/index.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/main.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/polyfills.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/styles.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/src/test.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/tsconfig.app.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/tsconfig.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/tsconfig.spec.json" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../001-hello-world/tslint.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,8 +40,11 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
+    <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.path.for.package.tslint" value="project" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="ts.external.directory.path" value="$PROJECT_DIR$/node_modules/typescript/lib" />
@@ -127,7 +88,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1600351630233</updated>
-      <workItem from="1600351631312" duration="330000" />
+      <workItem from="1600351631312" duration="600000" />
     </task>
     <servers />
   </component>

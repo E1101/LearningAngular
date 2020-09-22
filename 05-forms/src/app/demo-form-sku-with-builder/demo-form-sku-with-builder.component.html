@@ -1,0 +1,20 @@
+<div class="ui raised segment">
+  <h2 class="ui header">Demo Form: Sku with Builder</h2>
+  <!-- Here we’re telling Angular that we want to use myForm
+       as the FormGroup for this form. -->
+  <form [formGroup]="myForm"
+        (ngSubmit)="onSubmit(myForm.value)"
+        class="ui form">
+
+    <div class="field">
+      <label for="skuInput">SKU</label>
+      <!-- Here we are instructing the formControl directive to look at
+           myForm.controls and use the existing sku FormControl for this input. -->
+      <input [formControl]="myForm.controls['sku']" type="text"
+             id="skuInput"
+             placeholder="SKU">
+    </div>
+
+  <button type="submit" class="ui button">Submit</button>
+  </form>
+</div>
