@@ -1,0 +1,36 @@
+<div class="page-header">
+  <div class="container">
+    <h1>Router Sample</h1>
+    <div class="navLinks">
+      <!-- It might seem a little odd that the value of routerLink is a string with an array -
+           containing a string ("['/home']", for example). This is because there are more -
+           things you can provide when linking to routes.
+           --
+           When deploying to production we can also set the value of the base-href -
+           by using the --base-href command-line option.
+           -->
+      <a [routerLink]="['/home']">Home</a>
+      <a [routerLink]="['/about']">About Us</a>
+      <a [routerLink]="['/contact']">Contact Us</a>
+      |
+      <a [routerLink]="['/products']">Products</a>
+      <a [routerLink]="['/login']">Login</a>
+      <a [routerLink]="['/protected']">Protected</a>
+    </div>
+  </div>
+</div>
+
+<div id="content">
+  <div class="container">
+    <!-- The router-outlet element indicates where the contents of each route -
+         component will be rendered.
+
+         We are are able to use the router-outlet directive in our template because -
+         we imported the RouterModule in our NgModule.
+
+         Instruct Angular to take ownership of the click event and then initiate a -
+         route switch to the right place, based on the route definition.
+         -->
+    <router-outlet></router-outlet>
+  </div>
+</div>
