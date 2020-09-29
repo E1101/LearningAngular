@@ -16,6 +16,9 @@ export const routes: Routes = [
   { path: '', redirectTo: 'main', pathMatch: 'full' },
   { path: 'main', component: MainComponent },
   { path: 'more-info', component: MoreInfoComponent },
+  // when the user visits something that doesn’t match any other route,
+  // it will fallback to this route. Everything that is passed after /
+  // will be extracted to a parameter of the route, called id.
   { path: ':id', component: ProductComponent },
 ];
 

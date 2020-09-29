@@ -25,6 +25,14 @@ export class ProductsComponent
 
   goToProduct(id: string): void
   {
+    // Notice that we use the relative ./ path in the navigate function. -
+    // In order to use this we also pass the relativeTo object to the options,
+    // which tells the router what that route is relative to.
+    // --
+    // It’s also worth noting that the Angular router is smart enough to prioritize -
+    // concrete routes first (like /products/spotify) over the parameterized ones -
+    // (like /prod- ucts/123). This way /products/spotify will never be handled by -
+    // the more generic, catch-all route /products/:id.
     this.router.navigate(['./', id], {relativeTo: this.route});
   }
 }

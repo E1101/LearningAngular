@@ -1,13 +1,7 @@
-//
-// To use the routes in our app we do two things to our NgModule:
-//  1. Import the RouterModule
-//  2. Install the routes using RouterModule.forRoot(routes) in the imports of our NgModule
-//
-
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { HttpClientModule } from "@angular/common/http";
+import { HttpClientModule } from '@angular/common/http';
 import { RouterModule, Routes } from '@angular/router';    // <-- routes
 
 import { routes as childRoutes, ProductsModule } from './products/products.module';
@@ -23,6 +17,11 @@ import { ProductsComponent } from './products/products.component';
 import { AUTH_PROVIDERS } from './auth.service';
 import { LoggedInGuard } from './logged-in.guard';
 
+// To use the routes in our app we do two things to our NgModule:
+//  1. Import the RouterModule
+//  2. Install the routes using RouterModule.forRoot(routes) in the imports of our NgModule
+//
+
 // we declare the routes creating an array of objects that conform to the Routes type
 const routes: Routes = [
   // basic routes
@@ -36,6 +35,7 @@ const routes: Routes = [
   {
     path: 'protected',
     component: ProtectedComponent,
+    // We want this component to only be accessible to logged in users.
     canActivate: [ LoggedInGuard ]
   },
   // nested

@@ -1,6 +1,15 @@
 <h2>Products</h2>
 
 <div class="navLinks">
+  <!-- You can see that the route links are all in the format ['./main'], with a preceding ./
+  This indicates that you want to navigate the Main route relative to the current route context.
+  --
+  You could also declare the routes with the ['products', 'main'] notation.
+  (!) The downside is that by doing it this way, the child route is aware of the parent route -
+      and if you were to move this component around or reuse it, you would have to rewrite your route links.
+  --
+  Let’s say we want to visit the Show route, which is a child of the Product route. In this case, we -
+  use ['product', 'show'] as the route definition. -->
   <a [routerLink]="['./main']">Main</a> |
   <a [routerLink]="['./more-info']">More Info</a> |
   Enter id: <input #id size="6">
