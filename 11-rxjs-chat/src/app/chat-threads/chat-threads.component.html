@@ -1,11 +1,13 @@
 <!-- conversations -->
 <div class="row">
   <div class="conversation-wrap">
-
+    <!--
+    In this case, instead of watching for changes on an array of Threads, Angular will subscribe
+    for changes to the threads observable - and trigger an update when a new event is emitted.
+    -->
     <chat-thread
          *ngFor="let thread of threads | async"
          [thread]="thread">
     </chat-thread>
-
   </div>
 </div>

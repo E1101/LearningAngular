@@ -24,6 +24,12 @@
 
       <div class="panel-footer">
         <div class="input-group">
+          <!--
+          we’re establishing a two-way bind between the value of the input tag and draftMessage.text.
+          That is, if we type into the input tag, draftMessage.text will automatically be set to the
+          value of that input. Likewise, if we were to update draftMessage.text in our code, the value
+          in the input tag would change in the view.
+          -->
           <input type="text"
           class="chat-input"
           placeholder="Write your message here..."

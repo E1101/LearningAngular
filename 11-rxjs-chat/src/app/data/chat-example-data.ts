@@ -52,11 +52,14 @@ const initialMessages: Array<Message> = [
   }),
 ];
 
-export class ChatExampleData {
-  static init(messagesService: MessagesService,
-              threadsService: ThreadsService,
-              UsersService: UsersService): void {
-
+export class ChatExampleData
+{
+  static init(
+    messagesService: MessagesService,
+    threadsService: ThreadsService,
+    UsersService: UsersService
+  ): void
+  {
     // TODO make `messages` hot
     messagesService.messages.subscribe(() => ({}));
 
@@ -71,11 +74,12 @@ export class ChatExampleData {
     this.setupBots(messagesService);
   }
 
-  static setupBots(messagesService: MessagesService): void {
-
+  static setupBots(messagesService: MessagesService): void
+  {
     // echo bot
     messagesService.messagesForThreadUser(tEcho, echo)
-      .forEach( (message: Message): void => {
+      .forEach( (message: Message): void =>
+      {
         messagesService.addMessage(
           new Message({
             author: echo,
@@ -83,13 +87,13 @@ export class ChatExampleData {
             thread: tEcho
           })
         );
-      },
-                null);
+      },null);
 
 
     // reverse bot
     messagesService.messagesForThreadUser(tRev, rev)
-      .forEach( (message: Message): void => {
+      .forEach( (message: Message): void =>
+      {
         messagesService.addMessage(
           new Message({
             author: rev,
@@ -97,13 +101,12 @@ export class ChatExampleData {
             thread: tRev
           })
         );
-      },
-                null);
+      }, null);
 
     // waiting bot
     messagesService.messagesForThreadUser(tWait, wait)
-      .forEach( (message: Message): void => {
-
+      .forEach( (message: Message): void =>
+      {
         let waitTime: number = parseInt(message.text, 10);
         let reply: string;
 
@@ -125,9 +128,6 @@ export class ChatExampleData {
             );
           },
           waitTime * 1000);
-      },
-                null);
-
-
+      }, null);
   }
 }

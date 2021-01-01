@@ -1,6 +1,5 @@
 import {
   Component,
-  Inject,
   ElementRef,
   OnInit,
   ChangeDetectionStrategy
@@ -20,49 +19,55 @@ import { MessagesService } from '../message/messages.service';
   styleUrls: ['./chat-window.component.css'],
   changeDetection: ChangeDetectionStrategy.OnPush
 })
-export class ChatWindowComponent implements OnInit {
+export class ChatWindowComponent
+  implements OnInit
+{
   messages: Observable<any>;
   currentThread: Thread;
   draftMessage: Message;
   currentUser: User;
 
-  constructor(public messagesService: MessagesService,
-              public threadsService: ThreadsService,
-              public UsersService: UsersService,
-              public el: ElementRef) {
+  constructor(
+    public messagesService: MessagesService,
+    public threadsService: ThreadsService,
+    public UsersService: UsersService,
+    public el: ElementRef                    // an ElementRef which we can use to get access to the host DOM element.
+  ) {
+
   }
 
-  ngOnInit(): void {
+  ngOnInit(): void
+  {
     this.messages = this.threadsService.currentThreadMessages;
 
     this.draftMessage = new Message();
 
-    this.threadsService.currentThread.subscribe(
-      (thread: Thread) => {
-        this.currentThread = thread;
+    this.threadsService.currentThread.subscribe((thread: Thread) => {
+      this.currentThread = thread;
+    });
+
+    this.UsersService.currentUser.subscribe((user: User) => {
+      this.currentUser = user;
+    });
+
+    this.messages.subscribe((messages: Array<Message>) => {
+      // If we call scrollToBottom immediately when we get a new message then what happens is we scroll
+      // to the bottom before the new message is rendered. By using a setTimeout we’re telling JavaScript
+      // that we want to run this function when it is finished with the current execution queue.
+      setTimeout(() => {
+        this.scrollToBottom();
       });
-
-    this.UsersService.currentUser
-      .subscribe(
-        (user: User) => {
-          this.currentUser = user;
-        });
-
-    this.messages
-      .subscribe(
-        (messages: Array<Message>) => {
-          setTimeout(() => {
-            this.scrollToBottom();
-          });
-        });
+    });
   }
 
-  onEnter(event: any): void {
+  onEnter(event: any): void
+  {
     this.sendMessage();
     event.preventDefault();
   }
 
-  sendMessage(): void {
+  sendMessage(): void
+  {
     const m: Message = this.draftMessage;
     m.author = this.currentUser;
     m.thread = this.currentThread;
@@ -71,9 +76,9 @@ export class ChatWindowComponent implements OnInit {
     this.draftMessage = new Message();
   }
 
-  scrollToBottom(): void {
-    const scrollPane: any = this.el
-      .nativeElement.querySelector('.msg-container-base');
+  scrollToBottom(): void
+  {
+    const scrollPane: any = this.el.nativeElement.querySelector('.msg-container-base');
     scrollPane.scrollTop = scrollPane.scrollHeight;
   }
 }

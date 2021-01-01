@@ -2,11 +2,8 @@ import {
   Component,
   OnInit,
   Input,
-  Output,
-  EventEmitter
 } from '@angular/core';
-import { Observable } from 'rxjs';
-import { ThreadsService } from './../thread/threads.service';
+import { ThreadsService } from '../thread/threads.service';
 import { Thread } from '../thread/thread.model';
 
 @Component({
@@ -14,23 +11,28 @@ import { Thread } from '../thread/thread.model';
   templateUrl: './chat-thread.component.html',
   styleUrls: ['./chat-thread.component.css']
 })
-export class ChatThreadComponent implements OnInit {
+export class ChatThreadComponent
+  implements OnInit
+{
   @Input() thread: Thread;
   selected = false;
 
-  constructor(public threadsService: ThreadsService) {
-  }
+  constructor(public threadsService: ThreadsService)
+  { }
 
-  ngOnInit(): void {
+  // the method ngOnInit will be called on our component after the component has been checked for changes the first time.
+  // A key reason we will use ngOnInit is because our thread property won’t be available in the constructor.
+  ngOnInit(): void
+  {
     this.threadsService.currentThread
       .subscribe( (currentThread: Thread) => {
-        this.selected = currentThread &&
-          this.thread &&
+        this.selected = currentThread && this.thread &&
           (currentThread.id === this.thread.id);
       });
   }
 
-  clicked(event: any): void {
+  clicked(event: any): void
+  {
     this.threadsService.setCurrentThread(this.thread);
     event.preventDefault();
   }

@@ -1,3 +1,7 @@
+<!--
+We’re asking Angular to apply the msg-receive class if incoming is truthy (and apply
+msg-sent if incoming is falsey).
+-->
 <div class="msg-container"
      [ngClass]="{'base-sent': !incoming, 'base-receive': incoming}">
 
@@ -9,6 +13,12 @@
   <div class="messages"
     [ngClass]="{'msg-sent': !incoming, 'msg-receive': incoming}">
     <p>{{message.text}}</p>
+    <!--
+    The FromNowPipe is a pipe that casts our Messages sent-at time to a human-readable “x seconds ago” message.
+    --
+    If you’d like to learn about creating your own custom pipes read the source of the FromNowPipe
+    in code/rxjs/rxjs-chat/src/app/pipes/from-now.pipe.ts
+    -->
     <p class="time">{{message.sender}} • {{message.sentAt | fromNow}}</p>
   </div>
 

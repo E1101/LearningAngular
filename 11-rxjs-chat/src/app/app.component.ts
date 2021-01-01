@@ -10,10 +10,13 @@ import { MessagesService } from './message/messages.service';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
-    constructor(public messagesService: MessagesService,
-              public threadsService: ThreadsService,
-              public usersService: UsersService) {
-    ChatExampleData.init(messagesService, threadsService, usersService);
+export class AppComponent
+{
+    constructor(
+      public messagesService: MessagesService,
+      public threadsService: ThreadsService,
+      public usersService: UsersService
+    ) {
+      ChatExampleData.init(messagesService, threadsService, usersService);
   }
 }
